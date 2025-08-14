@@ -1,0 +1,21 @@
+{
+  "name": "welcomebotwithpanel",
+  "version": "1.0.0",
+  "description": "Medya sunucu için Muti tarafından geliştirilmiştir altyapı botudur satılamaz paylaşılamaz",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "discord.js": "^14.21.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "mongoose": "^8.16.4",
+    "metusbase": "^2.0.1"
+  }
+}

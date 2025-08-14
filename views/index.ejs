@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎛 Welcome Bot Panel</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+  <img src="<%= sunucuPFP %>" alt="Sunucu Logosu" class="logo" />
+  <span class="server-name">🌐 <%= sunucuAdi %></span>
+</nav>
+
+
+  <div class="container">
+    <h1>🎛 Welcome Bot Ayarları</h1>
+
+    <% if (typeof success !== 'undefined') { %>
+      <div class="success-message">✅ <%= success %></div>
+    <% } %>
+
+    <form action="/kaydet" method="POST" enctype="multipart/form-data">
+      
+
+      <label>🔊 Ses Kanal ID:</label>
+      <input type="text" name="kanalID" value="<%= ayar.kanalID %>" required />
+
+      <label>🕵️‍♂️ Kayıtsız Rol ID:</label>
+      <input type="text" name="kayitsizRolID" value="<%= ayar.kayitsizRolID %>" required />
+
+      <label>🛡️ Yetkili Rol ID:</label>
+      <input type="text" name="yetkiliRolID" value="<%= ayar.yetkiliRolID %>" required />
+
+      <label>📂 Kayıtsız Ses (.mp3/.wav):</label>
+      <input type="file" name="kayitsizSes" />
+
+      <label>📂 Yetkili Ses (.mp3/.wav):</label>
+      <input type="file" name="yetkiliSes" />
+
+      <button type="submit">💾 Ayarları Kaydet</button>
+    </form>
+  </div>
+</body>
+</html>
